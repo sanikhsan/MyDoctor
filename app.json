@@ -2,6 +2,7 @@
   "expo": {
     "name": "MyDoctor",
     "slug": "MyDoctor",
+    "scheme": "mydoctor",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/illustration/adaptive-icon.png",

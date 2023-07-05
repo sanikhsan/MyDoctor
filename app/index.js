@@ -1,11 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import Button from "./src/components/Button";
 import { useFonts, Nunito_600SemiBold } from "@expo-google-fonts/nunito";
-import Gap from "./src/components/Gap";
+import { Link, Stack } from "expo-router";
+import Button from "../src/components/Button";
+import Gap from "../src/components/Gap";
 
-const Logo = require("./src/assets/illustration/icon.png");
-const BackgroundImage = require("./src/assets/illustration/bg-getstarted.png");
+const Logo = require("../src/assets/illustration/icon.png");
+const BackgroundImage = require("../src/assets/illustration/bg-getstarted.png");
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -18,6 +19,12 @@ export default function App() {
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
+      <StatusBar style="light" />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+        }}
+      />
       <View>
         <Image style={styles.image} source={Logo} />
         <Text style={styles.title}>
@@ -25,17 +32,21 @@ export default function App() {
         </Text>
       </View>
       <View>
-        <Button label={"Get Started"} type={"primary"} />
+        <Link href="/signup" asChild>
+          <Button label={"Get Started"} type={"primary"} />
+        </Link>
         <Gap height={16} />
-        <Button label={"Sign In"} />
+        <Link href="/signin" asChild>
+          <Button label={"Sign In"} />
+        </Link>
       </View>
-      {/* <StatusBar style="auto" /> */}
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 50,
     padding: 40,
     backgroundColor: "white",
     justifyContent: "space-between",

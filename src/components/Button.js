@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { useFonts, Nunito_600SemiBold } from "@expo-google-fonts/nunito";
 
-export default function Button({ label, type }) {
+export default function Button({ label, type, onPress }) {
   let [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
   });
@@ -12,7 +12,7 @@ export default function Button({ label, type }) {
 
   return (
     <View style={styles.container(type)}>
-      <Pressable>
+      <Pressable onPress={onPress}>
         <Text style={styles.text(type)}>{label}</Text>
       </Pressable>
     </View>
@@ -21,7 +21,6 @@ export default function Button({ label, type }) {
 
 const styles = StyleSheet.create({
   container: (type) => ({
-    paddingTop: 16,
     backgroundColor: type === "primary" ? "#0BCAD4" : "white",
     borderRadius: 10,
     paddingVertical: 10,
