@@ -1,15 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { useFonts, Nunito_600SemiBold } from "@expo-google-fonts/nunito";
+import { fonts } from "../utils/fonts";
 
 export default function Button({ label, type, onPress }) {
-  let [fontsLoaded] = useFonts({
-    Nunito_600SemiBold,
-  });
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <View style={styles.container(type)}>
       <Pressable onPress={onPress}>
@@ -23,12 +15,12 @@ const styles = StyleSheet.create({
   container: (type) => ({
     backgroundColor: type === "primary" ? "#0BCAD4" : "white",
     borderRadius: 10,
-    paddingVertical: 10,
   }),
   text: (type) => ({
     color: type === "primary" ? "white" : "black",
-    textAlign: "center",
     fontSize: 18,
-    fontFamily: "Nunito_600SemiBold",
+    textAlign: "center",
+    fontFamily: fonts.Nunito[600],
+    paddingVertical: 10,
   }),
 });
