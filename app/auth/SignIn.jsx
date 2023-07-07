@@ -1,14 +1,15 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
 import { Link, Stack } from "expo-router";
-import InputGroup from "../components/InputGroup";
-import { IconApp } from "../assets/illustration";
-import LinkText from "../components/LinkText";
-import Button from "../components/Button";
-import { fonts } from "../utils/fonts";
-import Gap from "../components/Gap";
+import { StatusBar } from "expo-status-bar";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { IconApp } from "../../src/assets/illustration";
+import InputGroup from "../../src/components/InputGroup";
+import Gap from "../../src/components/Gap";
+import LinkText from "../../src/components/LinkText";
+import Button from "../../src/components/Button";
+import { fonts } from "../../src/utils/fonts";
 
-export default function SignInPage() {
+// Sign In Page
+export default function SignIn() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />

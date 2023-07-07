@@ -1,11 +1,12 @@
 import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import InputGroup from "../components/InputGroup";
-import Button from "../components/Button";
-import Gap from "../components/Gap";
+import InputGroup from "../../src/components/InputGroup";
+import Gap from "../../src/components/Gap";
+import Button from "../../src/components/Button";
 
-export default function SignUpPage() {
+// Sign Up Page
+export default function SignUp() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />

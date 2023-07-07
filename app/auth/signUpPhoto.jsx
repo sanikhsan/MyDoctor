@@ -1,13 +1,14 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Image, StyleSheet, Text, View } from "react-native";
-import Button from "../components/Button";
-import LinkText from "../components/LinkText";
-import { fonts } from "../utils/fonts";
-import { DefaultPhoto } from "../assets/illustration";
-import { IconAdd } from "../assets/icons";
+import { DefaultPhoto } from "../../src/assets/illustration";
+import { IconAdd } from "../../src/assets/icons";
+import Button from "../../src/components/Button";
+import LinkText from "../../src/components/LinkText";
+import { fonts } from "../../src/utils/fonts";
 
-export default function UploadPhotoPage() {
+// Sign Up Photo Route
+export default function SignUpPhoto() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />

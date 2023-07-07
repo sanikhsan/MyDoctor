@@ -1,12 +1,13 @@
 import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import { BgStarted, IconApp } from "../assets/illustration";
-import Button from "../components/Button";
-import { fonts } from "../utils/fonts";
-import Gap from "../components/Gap";
+import Gap from "../src/components/Gap";
+import Button from "../src/components/Button";
+import { fonts } from "../src/utils/fonts";
+import { BgStarted, IconApp } from "../src/assets/illustration";
 
-export default function GetStartedPage() {
+// Get Starter Page
+export default function App() {
   return (
     <ImageBackground source={BgStarted} style={styles.container}>
       <StatusBar style="light" />
