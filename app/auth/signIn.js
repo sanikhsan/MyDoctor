@@ -1,4 +1,4 @@
-import SignInPage from "../src/pages/SignIn";
+import SignInPage from "../../src/pages/SignIn";
 
 export default function SignIn() {
   return (

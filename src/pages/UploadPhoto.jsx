@@ -4,8 +4,8 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import Button from "../components/Button";
 import LinkText from "../components/LinkText";
 import { fonts } from "../utils/fonts";
-const photo = require("../assets/illustration/default-photo.png");
-const addIcon = require("../assets/icons/icon-add-photo.png");
+import { DefaultPhoto } from "../assets/illustration";
+import { IconAdd } from "../assets/icons";
 
 export default function UploadPhotoPage() {
   return (
@@ -18,8 +18,8 @@ export default function UploadPhotoPage() {
       />
       <View style={styles.profile}>
         <View style={styles.avatarBorder}>
-          <Image style={styles.avatar} source={photo} />
-          <Image style={styles.addAvatar} source={addIcon} />
+          <Image style={styles.avatar} source={DefaultPhoto} />
+          <IconAdd style={styles.addAvatar} />
         </View>
         <Text style={styles.name}>Nama Pengguna</Text>
         <Text style={styles.profession}>Jabatan</Text>

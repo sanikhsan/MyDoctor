@@ -1,16 +1,14 @@
+import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
+import { BgStarted, IconApp } from "../assets/illustration";
 import Button from "../components/Button";
-import Gap from "../components/Gap";
 import { fonts } from "../utils/fonts";
-
-const Logo = require("../assets/illustration/icon.png");
-const BackgroundImage = require("../assets/illustration/bg-getstarted.png");
+import Gap from "../components/Gap";
 
 export default function GetStartedPage() {
   return (
-    <ImageBackground source={BackgroundImage} style={styles.container}>
+    <ImageBackground source={BgStarted} style={styles.container}>
       <StatusBar style="light" />
       <Stack.Screen
         options={{
@@ -18,17 +16,17 @@ export default function GetStartedPage() {
         }}
       />
       <View>
-        <Image source={Logo} />
+        <Image source={IconApp} />
         <Text style={styles.title}>
           Konsultasi dengan dokter jadi lebih mudah & fleksibel
         </Text>
       </View>
       <View>
-        <Link href="/signUp" asChild>
+        <Link href="auth/signUp" asChild>
           <Button label={"Get Started"} type={"primary"} />
         </Link>
         <Gap height={16} />
-        <Link href="/signIn" asChild>
+        <Link href="/auth/signIn" asChild>
           <Button label={"Sign In"} />
         </Link>
       </View>

@@ -23,7 +23,7 @@ export default function SignUpPage() {
       <Gap height={24} />
       <InputGroup label={"Password"} />
       <Gap height={40} />
-      <Link href={"/signUpPhoto"} asChild>
+      <Link href={"auth/signUpPhoto"} asChild>
         <Button label={"Continue"} type={"primary"} />
       </Link>
     </View>

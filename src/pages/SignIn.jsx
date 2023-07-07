@@ -1,13 +1,12 @@
-import { StatusBar } from "expo-status-bar";
 import { Image, StyleSheet, Text, View } from "react-native";
-import InputGroup from "../components/InputGroup";
+import { StatusBar } from "expo-status-bar";
 import { Link, Stack } from "expo-router";
-import Gap from "../components/Gap";
+import InputGroup from "../components/InputGroup";
+import { IconApp } from "../assets/illustration";
 import LinkText from "../components/LinkText";
 import Button from "../components/Button";
 import { fonts } from "../utils/fonts";
-
-const Logo = require("../assets/illustration/icon.png");
+import Gap from "../components/Gap";
 
 export default function SignInPage() {
   return (
@@ -18,7 +17,7 @@ export default function SignInPage() {
           headerShown: false,
         }}
       />
-      <Image source={Logo} style={styles.image} />
+      <Image source={IconApp} style={styles.image} />
       <Text style={styles.text}>Masuk dan mulai berkonsultasi</Text>
       <InputGroup label={"Email Address"} />
       <Gap height={24} />
@@ -28,7 +27,7 @@ export default function SignInPage() {
       <Gap height={40} />
       <Button label={"Sign In"} type={"primary"} />
       <Gap height={30} />
-      <Link href={"signUp"} asChild>
+      <Link href={"auth/signUp"} asChild>
         <LinkText style={styles.linkText} label={"Create New Account"} />
       </Link>
     </View>

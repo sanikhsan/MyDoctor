@@ -1,4 +1,4 @@
-import UploadPhotoPage from "../src/pages/UploadPhoto";
+import UploadPhotoPage from "../../src/pages/UploadPhoto";
 
 export default function SignUpPhoto() {
   return (
