@@ -1,17 +1,18 @@
 import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text } from "react-native";
 import { IconApp } from "../../src/assets/illustration";
 import InputGroup from "../../src/components/InputGroup";
 import Gap from "../../src/components/Gap";
 import LinkText from "../../src/components/LinkText";
 import Button from "../../src/components/Button";
 import { fonts } from "../../src/utils/fonts";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Sign In Page
-export default function SignIn() {
+export default function SignInPage() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <Stack.Screen
         options={{
@@ -26,18 +27,19 @@ export default function SignIn() {
       <Gap height={10} />
       <LinkText label={"Forgot My Password"} />
       <Gap height={40} />
-      <Button label={"Sign In"} type={"primary"} />
+      <Link replace href={"main/Home"} asChild>
+        <Button label={"Sign In"} type={"primary"} />
+      </Link>
       <Gap height={30} />
-      <Link href={"auth/signUp"} asChild>
+      <Link href={"auth/SignUp"} asChild>
         <LinkText style={styles.linkText} label={"Create New Account"} />
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 60,
     padding: 40,
     backgroundColor: "white",
     flex: 1,

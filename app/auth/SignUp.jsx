@@ -4,11 +4,12 @@ import { StyleSheet, View } from "react-native";
 import InputGroup from "../../src/components/InputGroup";
 import Gap from "../../src/components/Gap";
 import Button from "../../src/components/Button";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Sign Up Page
-export default function SignUp() {
+export default function SignUpPage() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <Stack.Screen
         options={{
@@ -24,10 +25,10 @@ export default function SignUp() {
       <Gap height={24} />
       <InputGroup label={"Password"} />
       <Gap height={40} />
-      <Link href={"auth/signUpPhoto"} asChild>
+      <Link href={"auth/SignUpPhoto"} asChild>
         <Button label={"Continue"} type={"primary"} />
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
 

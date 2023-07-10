@@ -1,4 +1,4 @@
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { DefaultPhoto } from "../../src/assets/illustration";
@@ -6,11 +6,12 @@ import { IconAdd } from "../../src/assets/icons";
 import Button from "../../src/components/Button";
 import LinkText from "../../src/components/LinkText";
 import { fonts } from "../../src/utils/fonts";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Sign Up Photo Route
-export default function SignUpPhoto() {
+export default function SignUpPhotoPage() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <Stack.Screen
         options={{
@@ -26,10 +27,14 @@ export default function SignUpPhoto() {
         <Text style={styles.profession}>Jabatan</Text>
       </View>
       <View>
-        <Button label={"Upload and Continue"} type={"primary"} />
-        <LinkText style={styles.link} label={"Skip for this"} />
+        <Link replace href={"main/Home"} asChild>
+          <Button label={"Upload and Continue"} type={"primary"} />
+        </Link>
+        <Link replace href={"main/Home"} asChild>
+          <LinkText style={styles.link} label={"Skip for this"} />
+        </Link>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 

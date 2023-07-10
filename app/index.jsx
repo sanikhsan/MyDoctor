@@ -5,6 +5,7 @@ import Gap from "../src/components/Gap";
 import Button from "../src/components/Button";
 import { fonts } from "../src/utils/fonts";
 import { BgStarted, IconApp } from "../src/assets/illustration";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Get Starter Page
 export default function App() {
@@ -16,28 +17,27 @@ export default function App() {
           headerShown: false,
         }}
       />
-      <View>
+      <SafeAreaView>
         <Image source={IconApp} />
         <Text style={styles.title}>
           Konsultasi dengan dokter jadi lebih mudah & fleksibel
         </Text>
-      </View>
-      <View>
-        <Link href="auth/signUp" asChild>
+      </SafeAreaView>
+      <SafeAreaView>
+        <Link href="auth/SignUp" asChild>
           <Button label={"Get Started"} type={"primary"} />
         </Link>
         <Gap height={16} />
-        <Link href="/auth/signIn" asChild>
+        <Link href="auth/SignIn" asChild>
           <Button label={"Sign In"} />
         </Link>
-      </View>
+      </SafeAreaView>
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 50,
     padding: 40,
     backgroundColor: "white",
     justifyContent: "space-between",
