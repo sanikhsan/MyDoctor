@@ -1,17 +1,9 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import {
-  Image,
-  ImageBackground,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { ImageBackground, ScrollView, StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { BgHospital } from "../../src/assets/illustration";
 import { fonts } from "../../src/utils/fonts";
-import { DummyHospital2 } from "../../src/assets/dummy";
 import HospitalList from "../../src/components/HospitalList";
 
 export default function HospitalPage() {

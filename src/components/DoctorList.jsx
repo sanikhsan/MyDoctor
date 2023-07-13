@@ -1,18 +1,20 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { fonts } from "../utils/fonts";
 import { DummyDoctor2 } from "../assets/dummy";
+import { IconNextMessage } from "../assets/icons";
 
-export default function DoctorList() {
+export default function DoctorList({ type, onPress }) {
   let text = "Tampilan isi dari pesan secara singkat / terpotong";
   let result = text.slice(0, 35);
   return (
-    <View style={styles.profile}>
+    <TouchableOpacity style={styles.profile} onPress={onPress}>
       <Image source={DummyDoctor2} style={styles.avatar} />
-      <View>
+      <View style={styles.content}>
         <Text style={styles.name}>Nama Dokter</Text>
         <Text style={styles.message}>{result}...</Text>
       </View>
-    </View>
+      {type === "next" && <IconNextMessage />}
+    </TouchableOpacity>
   );
 }
 
@@ -21,8 +23,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "#EEEEEE",
+    borderBottomColor: "#EEE",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
+  content: { flex: 1 },
   avatar: {
     height: 70,
     width: 70,

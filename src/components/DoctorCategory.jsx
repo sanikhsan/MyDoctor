@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { IconCatUmum } from "../assets/icons";
 import { fonts } from "../utils/fonts";
 
-export default function DoctorCategory() {
+export default function DoctorCategory({ onPress }) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <IconCatUmum />
       <Text style={styles.label}>Saya butuh</Text>
-      <Text>dokter umum</Text>
-    </View>
+      <Text style={styles.category}>dokter umum</Text>
+    </TouchableOpacity>
   );
 }
 

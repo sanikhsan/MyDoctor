@@ -11,6 +11,10 @@ import IconCatObat from "./icon-dokter-obat.svg";
 import IconCatPsikiater from "./icon-dokter-psikiater.svg";
 import IconCatAnak from "./icon-dokter-anak.svg";
 import IconStar from "./icon-star.svg";
+import IconWhiteArrow from "./icon-arrow-back-white.svg";
+import IconNextMessage from "./icon-arrow-right-message.svg";
+import IconSendActive from "./icon-button-send-active.svg";
+import IconSendDisable from "./icon-button-send-disable.svg";
 
 export {
   IconAdd,
@@ -26,4 +30,8 @@ export {
   IconCatPsikiater,
   IconCatAnak,
   IconStar,
+  IconWhiteArrow,
+  IconNextMessage,
+  IconSendDisable,
+  IconSendActive,
 };

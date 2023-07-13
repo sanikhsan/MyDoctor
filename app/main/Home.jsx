@@ -1,4 +1,4 @@
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -25,7 +25,9 @@ export default function HomePage() {
           <View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <Gap width={16} />
-              <DoctorCategory />
+              <Link href={"message/ListDoctor"} asChild>
+                <DoctorCategory />
+              </Link>
               <DoctorCategory />
               <DoctorCategory />
               <DoctorCategory />

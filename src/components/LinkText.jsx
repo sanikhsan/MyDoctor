@@ -1,13 +1,11 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { fonts } from "../utils/fonts";
 
 export default function LinkText({ style, label, onPress }) {
   return (
-    <View>
-      <Pressable onPress={onPress}>
-        <Text style={[styles.text, style]}>{label}</Text>
-      </Pressable>
-    </View>
+    <TouchableOpacity onPress={onPress}>
+      <Text style={[styles.text, style]}>{label}</Text>
+    </TouchableOpacity>
   );
 }
 
