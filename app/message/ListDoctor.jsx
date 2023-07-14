@@ -2,8 +2,8 @@ import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import HeaderMessage from "../../src/components/HeaderMessage";
 import { ScrollView, StyleSheet } from "react-native";
-import DoctorList from "../../src/components/DoctorList";
 import { SafeAreaView } from "react-native-safe-area-context";
+import ItemList from "../../src/components/ItemList";
 
 export default function ListDoctorPage({ onPress }) {
   return (
@@ -24,17 +24,48 @@ export default function ListDoctorPage({ onPress }) {
       />
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <Link href={"message/Chat"} asChild>
-          <DoctorList type={"next"} onPress={onPress} />
+          <ItemList
+            type={"next"}
+            onPress={onPress}
+            name={"Nama Dokter"}
+            desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+          />
         </Link>
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
-        <DoctorList type={"next"} />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
+        <ItemList
+          type={"next"}
+          name={"Nama Dokter"}
+          desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+        />
       </ScrollView>
     </SafeAreaView>
   );

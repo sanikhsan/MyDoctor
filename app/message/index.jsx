@@ -1,15 +1,24 @@
 import { StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { fonts } from "../../src/utils/fonts";
-import DoctorList from "../../src/components/DoctorList";
+import ItemList from "../../src/components/ItemList";
 
 export default function MessagePage() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Messages</Text>
-      <DoctorList />
-      <DoctorList />
-      <DoctorList />
+      <ItemList
+        name={"Nama Dokter"}
+        desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+      />
+      <ItemList
+        name={"Nama Dokter"}
+        desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+      />
+      <ItemList
+        name={"Nama Dokter"}
+        desc={"Tampilan isi dari pesan secara singkat / terpotong"}
+      />
     </SafeAreaView>
   );
 }

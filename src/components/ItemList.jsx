@@ -1,17 +1,25 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { fonts } from "../utils/fonts";
 import { DummyDoctor2 } from "../assets/dummy";
-import { IconNextMessage } from "../assets/icons";
+import {
+  IconDoc,
+  IconLang,
+  IconNextMessage,
+  IconProfile,
+  IconRating,
+} from "../assets/icons";
 
-export default function DoctorList({ type, onPress }) {
-  let text = "Tampilan isi dari pesan secara singkat / terpotong";
-  let result = text.slice(0, 35);
+export default function ItemList({ type, onPress, icon, name, desc }) {
   return (
     <TouchableOpacity style={styles.profile} onPress={onPress}>
-      <Image source={DummyDoctor2} style={styles.avatar} />
+      {icon === "language" && <IconLang style={styles.avatar} />}
+      {icon === "profile" && <IconProfile style={styles.avatar} />}
+      {icon === "rating" && <IconRating style={styles.avatar} />}
+      {icon === "documentation" && <IconDoc style={styles.avatar} />}
+      {!icon && <Image source={DummyDoctor2} style={styles.avatar} />}
       <View style={styles.content}>
-        <Text style={styles.name}>Nama Dokter</Text>
-        <Text style={styles.message}>{result}...</Text>
+        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.message}>{desc.slice(0, 35)}</Text>
       </View>
       {type === "next" && <IconNextMessage />}
     </TouchableOpacity>

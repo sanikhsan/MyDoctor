@@ -1,11 +1,11 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { DummyDoctor1 } from "../assets/dummy";
 import { fonts } from "../utils/fonts";
 import { IconStar } from "../assets/icons";
 
-export default function RatedDoctor() {
+export default function RatedDoctor({ onPress }) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image source={DummyDoctor1} style={styles.avatar} />
       <View style={styles.profile}>
         <Text style={styles.label}>Nama Dokter</Text>
@@ -18,7 +18,7 @@ export default function RatedDoctor() {
         <IconStar />
         <IconStar />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

@@ -15,6 +15,12 @@ import IconWhiteArrow from "./icon-arrow-back-white.svg";
 import IconNextMessage from "./icon-arrow-right-message.svg";
 import IconSendActive from "./icon-button-send-active.svg";
 import IconSendDisable from "./icon-button-send-disable.svg";
+import IconDoc from "./icon-documentation.svg";
+import IconLang from "./icon-language.svg";
+import IconRating from "./icon-rating-star.svg";
+import IconProfile from "./icon-profile.svg";
+import IconFemale from "./icon-gender-female.svg";
+import IconMale from "./icon-gender-male.svg";
 
 export {
   IconAdd,
@@ -34,4 +40,10 @@ export {
   IconNextMessage,
   IconSendDisable,
   IconSendActive,
+  IconDoc,
+  IconLang,
+  IconProfile,
+  IconRating,
+  IconMale,
+  IconFemale,
 };

@@ -17,7 +17,9 @@ export default function HomePage() {
           <StatusBar style="dark" backgroundColor="#FFF" />
           <Stack.Screen options={{ headerShown: false }} />
           <View style={styles.wrapper}>
-            <HomeProfile />
+            <Link href={"profile/UserProfile"} asChild>
+              <HomeProfile />
+            </Link>
             <Text style={styles.titleLabel}>
               Mau konsultasi dengan siapa hari ini?
             </Text>
@@ -36,7 +38,9 @@ export default function HomePage() {
           </View>
           <View style={styles.wrapper}>
             <Text style={styles.titleLabel}>Top Rated Doctors</Text>
-            <RatedDoctor />
+            <Link href={"profile/DoctorProfile"} asChild>
+              <RatedDoctor />
+            </Link>
             <RatedDoctor />
             <RatedDoctor />
           </View>
