@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function InputGroup({ label }) {
   return (
@@ -13,12 +14,12 @@ export default function InputGroup({ label }) {
 const Styles = StyleSheet.create({
   label: {
     paddingBottom: 6,
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 20,
     fontFamily: fonts.Nunito[400],
   },
   input: {
-    borderColor: "#E9E9E9",
+    borderColor: colors.Border.blur,
     height: 45,
     fontSize: 20,
     padding: 12,

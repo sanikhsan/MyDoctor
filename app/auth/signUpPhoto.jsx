@@ -7,6 +7,7 @@ import Button from "../../src/components/Button";
 import LinkText from "../../src/components/LinkText";
 import { fonts } from "../../src/utils/fonts";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { colors } from "../../src/utils/colors";
 
 // Sign Up Photo Route
 export default function SignUpPhotoPage() {
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 40,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
   },
   avatar: {
     height: 110,
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     width: 130,
     height: 130,
     borderWidth: 1,
-    borderColor: "#E9E9E9",
+    borderColor: colors.Border.blur,
     borderRadius: 130 / 2,
     alignItems: "center",
     justifyContent: "center",
@@ -69,14 +70,14 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   name: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 28,
     fontFamily: fonts.Nunito[600],
     paddingTop: 26,
     textAlign: "center",
   },
   profession: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 22,
     fontFamily: fonts.Nunito[400],
     textAlign: "center",

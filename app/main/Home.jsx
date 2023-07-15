@@ -8,12 +8,13 @@ import RatedDoctor from "../../src/components/RatedDoctor";
 import NewsItem from "../../src/components/NewsItem";
 import { fonts } from "../../src/utils/fonts";
 import Gap from "../../src/components/Gap";
+import { colors } from "../../src/utils/colors";
 
 export default function HomePage() {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.main}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.main}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <StatusBar style="dark" backgroundColor="#FFF" />
           <Stack.Screen options={{ headerShown: false }} />
           <View style={styles.wrapper}>
@@ -50,15 +51,15 @@ export default function HomePage() {
           <NewsItem style={styles.wrapper} />
           <NewsItem />
           <NewsItem />
-        </View>
-      </SafeAreaView>
-    </ScrollView>
+        </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#112340",
+    backgroundColor: colors.Background.black,
     flex: 1,
   },
   wrapper: {
@@ -66,14 +67,13 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   main: {
-    paddingVertical: 30,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
     flex: 1,
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20,
   },
   titleLabel: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 20,
     fontFamily: fonts.Nunito[700],
     marginTop: 30,

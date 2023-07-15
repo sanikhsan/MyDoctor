@@ -3,6 +3,7 @@ import { IconWhiteArrow } from "../assets/icons";
 import { fonts } from "../utils/fonts";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { DummyDoctor3 } from "../assets/dummy";
+import { colors } from "../utils/colors";
 
 export default function HeaderMessage({
   label,
@@ -35,14 +36,14 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
     paddingVertical: 30,
-    backgroundColor: "#112340",
+    backgroundColor: colors.Background.black,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     flexDirection: "row",
     alignItems: "center",
   },
   label: {
-    color: "#FFF",
+    color: colors.Font.white,
     textAlign: "center",
     fontSize: 24,
     fontFamily: fonts.Nunito[600],
@@ -55,13 +56,13 @@ const styles = StyleSheet.create({
   },
   content: { flex: 1 },
   name: {
-    color: "#FFF",
+    color: colors.Font.white,
     textAlign: "center",
     fontSize: 24,
     fontFamily: fonts.Nunito[600],
   },
   profession: {
-    color: "#8092AF",
+    color: colors.Font.darkGray,
     textAlign: "center",
     fontSize: 16,
     fontFamily: fonts.Nunito[400],

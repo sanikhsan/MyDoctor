@@ -2,6 +2,7 @@ import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import MessagePage from "../message";
+import { colors } from "../../src/utils/colors";
 
 export default function HomeMessagePage() {
   return (
@@ -15,7 +16,7 @@ export default function HomeMessagePage() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#112340",
+    backgroundColor: colors.Background.black,
     flex: 1,
   },
 });

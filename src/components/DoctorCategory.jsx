@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { IconCatUmum } from "../assets/icons";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function DoctorCategory({ onPress }) {
   return (
@@ -14,20 +15,20 @@ export default function DoctorCategory({ onPress }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#EDFCFD",
+    backgroundColor: colors.Background.bluesky,
     borderRadius: 10,
     alignSelf: "flex-start",
     marginRight: 10,
     padding: 12,
   },
   label: {
-    color: "#112340",
+    color: colors.Font.black,
     marginTop: 28,
     fontSize: 16,
     fontFamily: fonts.Nunito[300],
   },
   category: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 16,
     fontFamily: fonts.Nunito[600],
   },

@@ -7,6 +7,7 @@ import ChatInput from "../../src/components/ChatInput";
 import { fonts } from "../../src/utils/fonts";
 import ChatItemUser from "../../src/components/ChatItemUser";
 import ChatItemDoctor from "../../src/components/ChatItemDoctor";
+import { colors } from "../../src/utils/colors";
 
 export default function ChatPage() {
   return (
@@ -46,14 +47,14 @@ export default function ChatPage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
   },
   content: {
     marginTop: 110,
     flex: 1,
   },
   date: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 14,
     textAlign: "center",
     fontFamily: fonts.Nunito[400],

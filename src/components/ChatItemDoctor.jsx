@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import { fonts } from "../utils/fonts";
 import { DummyDoctor2 } from "../assets/dummy";
+import { colors } from "../utils/colors";
 
 export default function ChatItemDoctor() {
   return (
@@ -27,15 +28,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderBottomLeftRadius: 0,
     maxWidth: "80%",
-    backgroundColor: "#0BCAD4",
+    backgroundColor: colors.Background.green,
   },
   chat: {
-    color: "#FFF",
+    color: colors.Font.white,
     fontSize: 18,
     fontFamily: fonts.Nunito[400],
   },
   date: {
-    color: "#FFF",
+    color: colors.Font.white,
     fontSize: 15,
     fontFamily: fonts.Nunito[400],
     marginTop: 8,

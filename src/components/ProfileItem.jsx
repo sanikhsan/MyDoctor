@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function ProfileItem({ label, value }) {
   return (
@@ -15,16 +16,16 @@ export default function ProfileItem({ label, value }) {
 const styles = StyleSheet.create({
   container: {
     borderBottomWidth: 1,
-    borderBottomColor: "#EEE",
+    borderBottomColor: colors.Border.gray,
   },
   content: { padding: 16 },
   label: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 20,
     fontFamily: fonts.Nunito[400],
   },
   value: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 20,
     fontFamily: fonts.Nunito[400],
   },

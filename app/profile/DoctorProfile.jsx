@@ -5,6 +5,7 @@ import ProfileItem from "../../src/components/ProfileItem";
 import PhotoProfile from "../../src/components/PhotoProfile";
 import Gap from "../../src/components/Gap";
 import Button from "../../src/components/Button";
+import { colors } from "../../src/utils/colors";
 
 export default function DoctorProfile() {
   return (
@@ -38,7 +39,7 @@ export default function DoctorProfile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
   },
   buttonWrapper: {
     paddingTop: 7,

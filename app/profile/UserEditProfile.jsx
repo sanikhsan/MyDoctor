@@ -5,6 +5,7 @@ import PhotoProfile from "../../src/components/PhotoProfile";
 import Gap from "../../src/components/Gap";
 import InputGroup from "../../src/components/InputGroup";
 import Button from "../../src/components/Button";
+import { colors } from "../../src/utils/colors";
 
 export default function UserEditProfile() {
   return (
@@ -34,7 +35,7 @@ export default function UserEditProfile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
     paddingHorizontal: 40,
   },
 });

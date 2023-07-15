@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { DummyDoctor1 } from "../assets/dummy";
 import { fonts } from "../utils/fonts";
 import { IconStar } from "../assets/icons";
+import { colors } from "../utils/colors";
 
 export default function RatedDoctor({ onPress }) {
   return (
@@ -38,12 +39,12 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   label: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 20,
     fontFamily: fonts.Nunito[600],
   },
   profession: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 16,
     fontFamily: fonts.Nunito[400],
   },

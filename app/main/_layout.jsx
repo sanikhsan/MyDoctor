@@ -7,6 +7,7 @@ import {
   IconMessage,
   IconMessageActive,
 } from "../../src/assets/icons";
+import { colors } from "../../src/utils/colors";
 
 export default function MainLayout() {
   return (
@@ -15,11 +16,11 @@ export default function MainLayout() {
       <Stack.Screen options={{ headerShown: false }} />
       <Tabs
         screenOptions={{
-          tabBarActiveTintColor: "#0BCAD4",
-          tabBarInactiveTintColor: "#495A75",
+          tabBarActiveTintColor: colors.Navbar.active,
+          tabBarInactiveTintColor: colors.Navbar.blur,
           tabBarStyle: {
-            backgroundColor: "#112340",
-            borderTopColor: "#112340",
+            backgroundColor: colors.Background.black,
+            borderTopColor: colors.Background.black,
           },
         }}
       >

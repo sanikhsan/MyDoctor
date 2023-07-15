@@ -1,5 +1,6 @@
 import { Stack } from "expo-router";
 import { fonts } from "../src/utils/fonts";
+import { colors } from "../src/utils/colors";
 
 export default function Layout() {
   return (
@@ -7,7 +8,7 @@ export default function Layout() {
       screenOptions={{
         headerTitleAlign: "center",
         headerStyle: {
-          backgroundColor: "white",
+          backgroundColor: colors.Background.white,
         },
         headerTitleStyle: {
           fontFamily: fonts.Nunito[600],

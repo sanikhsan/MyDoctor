@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import { DummyHospital2 } from "../assets/dummy";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function HospitalList() {
   return (
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     paddingTop: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "#EEE",
+    borderBottomColor: colors.Border.gray,
     flexDirection: "row",
   },
   image: {
@@ -30,13 +31,13 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   name: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 20,
     fontFamily: fonts.Nunito[400],
     maxWidth: 151,
   },
   address: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 16,
     fontFamily: fonts.Nunito[300],
     paddingTop: 6,

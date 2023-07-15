@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function ChatItemUser() {
   return (
@@ -14,7 +15,7 @@ export default function ChatItemUser() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#EDFCFD",
+    backgroundColor: colors.Background.bluesky,
     padding: 12,
     paddingRight: 18,
     marginRight: 16,
@@ -25,12 +26,12 @@ const styles = StyleSheet.create({
     borderBottomEndRadius: 0,
   },
   chat: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 18,
     fontFamily: fonts.Nunito[400],
   },
   date: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     alignSelf: "flex-end",
     fontSize: 15,
     fontFamily: fonts.Nunito[400],

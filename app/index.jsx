@@ -6,6 +6,7 @@ import Button from "../src/components/Button";
 import { fonts } from "../src/utils/fonts";
 import { BgStarted, IconApp } from "../src/assets/illustration";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { colors } from "../src/utils/colors";
 
 // Get Starter Page
 export default function App() {
@@ -39,13 +40,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     padding: 40,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
     justifyContent: "space-between",
     flex: 1,
   },
   title: {
     fontSize: 32,
-    color: "#fff",
+    color: colors.Font.white,
     marginTop: 91,
     fontFamily: fonts.Nunito[600],
   },

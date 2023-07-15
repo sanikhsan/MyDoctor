@@ -8,6 +8,7 @@ import LinkText from "../../src/components/LinkText";
 import Button from "../../src/components/Button";
 import { fonts } from "../../src/utils/fonts";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { colors } from "../../src/utils/colors";
 
 // Sign In Page
 export default function SignInPage() {
@@ -41,11 +42,11 @@ export default function SignInPage() {
 const styles = StyleSheet.create({
   container: {
     padding: 40,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
     flex: 1,
   },
   text: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 28,
     paddingVertical: 40,
     fontFamily: fonts.Nunito[600],

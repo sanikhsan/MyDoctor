@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { DummyUser } from "../assets/dummy";
 import { fonts } from "../utils/fonts";
 import { IconFemale, IconMale, IconRemove } from "../assets/icons";
+import { colors } from "../utils/colors";
 
 export default function PhotoProfile({
   editing,
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     height: 130,
     width: 130,
     borderRadius: 130 / 2,
-    borderColor: "#E9E9E9",
+    borderColor: colors.Border.blur,
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -55,13 +56,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   name: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 24,
     fontFamily: fonts.Nunito[600],
     paddingTop: 16,
   },
   profession: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 20,
     fontFamily: fonts.Nunito[400],
   },

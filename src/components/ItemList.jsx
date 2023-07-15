@@ -8,6 +8,7 @@ import {
   IconProfile,
   IconRating,
 } from "../assets/icons";
+import { colors } from "../utils/colors";
 
 export default function ItemList({ type, onPress, icon, name, desc }) {
   return (
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "#EEE",
+    borderBottomColor: colors.Border.gray,
     alignItems: "center",
     justifyContent: "space-between",
   },
@@ -43,12 +44,12 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   name: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 20,
     fontFamily: fonts.Nunito[400],
   },
   message: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 16,
     fontFamily: fonts.Nunito[300],
   },

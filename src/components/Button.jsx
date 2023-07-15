@@ -1,5 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function Button({ label, type, onPress }) {
   return (
@@ -13,11 +14,12 @@ export default function Button({ label, type, onPress }) {
 
 const styles = StyleSheet.create({
   container: (type) => ({
-    backgroundColor: type === "primary" ? "#0BCAD4" : "white",
+    backgroundColor:
+      type === "primary" ? colors.Button.green : colors.Button.white,
     borderRadius: 10,
   }),
   text: (type) => ({
-    color: type === "primary" ? "white" : "black",
+    color: type === "primary" ? colors.Font.white : colors.Font.black,
     fontSize: 18,
     textAlign: "center",
     fontFamily: fonts.Nunito[600],

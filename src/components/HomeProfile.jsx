@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { DummyUser } from "../assets/dummy";
 import { fonts } from "../utils/fonts";
+import { colors } from "../utils/colors";
 
 export default function HomeProfile({ onPress }) {
   return (
@@ -17,6 +18,7 @@ export default function HomeProfile({ onPress }) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    marginTop: 30,
   },
   avatar: {
     height: 56,
@@ -25,12 +27,12 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   name: {
-    color: "#112340",
+    color: colors.Font.black,
     fontSize: 20,
     fontFamily: fonts.Nunito[600],
   },
   profession: {
-    color: "#7D8797",
+    color: colors.Font.gray,
     fontSize: 16,
     fontFamily: fonts.Nunito[400],
   },

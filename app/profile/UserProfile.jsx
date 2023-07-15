@@ -4,6 +4,7 @@ import { SafeAreaView, StyleSheet } from "react-native";
 import PhotoProfile from "../../src/components/PhotoProfile";
 import ItemList from "../../src/components/ItemList";
 import Gap from "../../src/components/Gap";
+import { colors } from "../../src/utils/colors";
 
 export default function UserProfilePage() {
   return (
@@ -50,6 +51,6 @@ export default function UserProfilePage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
   },
 });

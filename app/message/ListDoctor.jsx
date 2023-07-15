@@ -4,6 +4,7 @@ import HeaderMessage from "../../src/components/HeaderMessage";
 import { ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ItemList from "../../src/components/ItemList";
+import { colors } from "../../src/utils/colors";
 
 export default function ListDoctorPage({ onPress }) {
   return (
@@ -73,7 +74,7 @@ export default function ListDoctorPage({ onPress }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: colors.Background.white,
     flex: 1,
   },
   content: {
