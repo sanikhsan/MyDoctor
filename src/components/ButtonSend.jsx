@@ -4,7 +4,7 @@ import { colors } from "../utils/colors";
 
 export default function ButtonSend({ disabled }) {
   return (
-    <TouchableOpacity style={styles.container(disabled)}>
+    <TouchableOpacity activeOpacity={0.5} style={styles.container(disabled)}>
       {disabled && <IconSendDisable />}
       {!disabled && <IconSendActive />}
     </TouchableOpacity>

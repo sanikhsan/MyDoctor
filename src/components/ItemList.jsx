@@ -12,7 +12,11 @@ import { colors } from "../utils/colors";
 
 export default function ItemList({ type, onPress, icon, name, desc }) {
   return (
-    <TouchableOpacity style={styles.profile} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      style={styles.profile}
+      onPress={onPress}
+    >
       {icon === "language" && <IconLang style={styles.avatar} />}
       {icon === "profile" && <IconProfile style={styles.avatar} />}
       {icon === "rating" && <IconRating style={styles.avatar} />}

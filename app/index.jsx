@@ -1,6 +1,6 @@
 import { Link, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, StyleSheet, Text } from "react-native";
 import Gap from "../src/components/Gap";
 import Button from "../src/components/Button";
 import { fonts } from "../src/utils/fonts";

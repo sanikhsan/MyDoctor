@@ -6,7 +6,11 @@ import { colors } from "../utils/colors";
 
 export default function RatedDoctor({ onPress }) {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      style={styles.container}
+      onPress={onPress}
+    >
       <Image source={DummyDoctor1} style={styles.avatar} />
       <View style={styles.profile}>
         <Text style={styles.label}>Nama Dokter</Text>

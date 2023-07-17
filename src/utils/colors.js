@@ -4,6 +4,7 @@ export const colors = {
     white: "#FFFFFF",
   },
   Font: {
+    green: "#0BCAD4",
     black: "#112340",
     white: "#FFFFFF",
     darkGray: "#8092AF",
@@ -24,8 +25,10 @@ export const colors = {
     black: "#112340",
     white: "#FFFFFF",
     gray: "#EDEEF0",
+    red: "#E06379",
     blue: "#0066CB",
     bluesky: "#EDFCFD",
     green: "#0BCAD4",
+    grayTransparent: "rgba(0, 0, 0, 0.3)",
   },
 };

@@ -4,7 +4,7 @@ import { colors } from "../utils/colors";
 
 export default function LinkText({ style, label, onPress }) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
       <Text style={[styles.text, style]}>{label}</Text>
     </TouchableOpacity>
   );

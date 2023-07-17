@@ -5,7 +5,11 @@ import { colors } from "../utils/colors";
 
 export default function DoctorCategory({ onPress }) {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      style={styles.container}
+      onPress={onPress}
+    >
       <IconCatUmum />
       <Text style={styles.label}>Saya butuh</Text>
       <Text style={styles.category}>dokter umum</Text>

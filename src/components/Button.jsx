@@ -1,14 +1,23 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { fonts } from "../utils/fonts";
 import { colors } from "../utils/colors";
 
-export default function Button({ label, type, onPress }) {
+export default function Button({ label, type, onPress, disabled }) {
+  if (disabled) {
+    return (
+      <View style={styles.disabled}>
+        <Text style={styles.textDisabled}>{label}</Text>
+      </View>
+    );
+  }
   return (
-    <View style={styles.container(type)}>
-      <Pressable onPress={onPress}>
-        <Text style={styles.text(type)}>{label}</Text>
-      </Pressable>
-    </View>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      style={styles.container(type)}
+      onPress={onPress}
+    >
+      <Text style={styles.text(type)}>{label}</Text>
+    </TouchableOpacity>
   );
 }
 
@@ -25,4 +34,15 @@ const styles = StyleSheet.create({
     fontFamily: fonts.Nunito[600],
     paddingVertical: 10,
   }),
+  disabled: {
+    backgroundColor: colors.Background.gray,
+    borderRadius: 10,
+  },
+  textDisabled: {
+    color: colors.Font.grayDisable,
+    fontSize: 18,
+    textAlign: "center",
+    fontFamily: fonts.Nunito[600],
+    paddingVertical: 10,
+  },
 });

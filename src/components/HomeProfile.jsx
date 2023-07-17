@@ -5,7 +5,11 @@ import { colors } from "../utils/colors";
 
 export default function HomeProfile({ onPress }) {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      style={styles.container}
+      onPress={onPress}
+    >
       <Image source={DummyUser} style={styles.avatar} />
       <View>
         <Text style={styles.name}>Nama Pengguna</Text>
